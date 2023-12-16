@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="maven-pos" options="--add-exports jdk.jdeps/com.sun.tools.classfile=ALL-UNNAMED" />
+      <module name="maven-pos" options="" />
     </option>
   </component>
 </project>

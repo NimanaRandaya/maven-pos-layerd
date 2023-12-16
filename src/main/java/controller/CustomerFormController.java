@@ -1,5 +1,7 @@
 package controller;
 
+import bo.custom.CustomerBo;
+import bo.custom.impl.CustomerBoImpl;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,8 +14,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import dto.CustomerDto;
 import dto.tm.CustomerTm;
-import dao.CustomerModel;
-import dao.impl.CustomerModelImpl;
+import dao.custom.CustomerDao;
+import dao.custom.impl.CustomerDaoImpl;
 
 import java.io.IOException;
 import java.sql.*;
@@ -51,7 +53,12 @@ public class CustomerFormController {
     @FXML
     private TableColumn colOption;
 
-    private CustomerModel customerModel = new CustomerModelImpl();
+    private CustomerBo <CustomerDto> customerBo = new CustomerBoImpl() {
+        @Override
+        public boolean saveCustomer(CustomerDto dto) throws SQLException, ClassNotFoundException {
+            return false;
+        }
+    };
 
     public void initialize(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -79,7 +86,7 @@ public class CustomerFormController {
     private void loadCustomerTable() {
         ObservableList<CustomerTm> tmList = FXCollections.observableArrayList();
         try {
-            List<CustomerDto>dtoList = customerModel.allCustomer();
+            List<CustomerDto> dtoList = customerBo.allCustomers();
             for (CustomerDto dto:dtoList){
                 Button btn = new Button("Delete");
                 CustomerTm c = new CustomerTm(
@@ -106,7 +113,7 @@ public class CustomerFormController {
     private void deleteCustomer(String id) {
 
         try {
-            boolean isDeleted = customerModel.deleteCustomer(id);
+            boolean isDeleted = customerBo.deleteCustomer(id);
             if (isDeleted){
                 new Alert(Alert.AlertType.INFORMATION,"Customer Deleted!").show();
                 loadCustomerTable();
@@ -137,7 +144,7 @@ public class CustomerFormController {
     @FXML
     void saveButtonOnAction(ActionEvent event) {
         try {
-            boolean isSaved = customerModel.saveCustomer(new CustomerDto(txtId.getText(),
+            boolean isSaved = customerBo.saveCustomer(new CustomerDto(txtId.getText(),
                     txtName.getText(),
                     txtAddress.getText(),
                     Double.parseDouble(txtSalary.getText()))
@@ -158,7 +165,7 @@ public class CustomerFormController {
     void updateButtonOnAction(ActionEvent event) {
 
        try {
-            boolean isUpdated = customerModel.updateCustomer( new CustomerDto(txtId.getText(),
+            boolean isUpdated = customerBo.updateCustomer( new CustomerDto(txtId.getText(),
                     txtName.getText(),
                     txtAddress.getText(),
                     Double.parseDouble(txtSalary.getText())

@@ -21,8 +21,8 @@ import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import dto.tm.ItemTm;
-import dao.ItemModel;
-import dao.impl.ItemModelImpl;
+import dao.custom.ItemDao;
+import dao.custom.impl.ItemDaoImpl;
 import java.io.IOException;
 import java.sql.*;
 import java.util.List;
@@ -64,7 +64,7 @@ public class ItemFormController {
     @FXML
     private TreeTableColumn colOption;
 
-    private ItemModel itemModel  = new ItemModelImpl();
+    private ItemDao itemDao = new ItemDaoImpl();
 
     public void initialize(){
         colItemCode.setCellValueFactory(new TreeItemPropertyValueFactory<>("code"));
@@ -105,7 +105,7 @@ public class ItemFormController {
     private void loadItemTable() {
         ObservableList<ItemTm> tmList = FXCollections.observableArrayList();
         try {
-            List<ItemDto> dtoList = itemModel.allItems();
+            List<ItemDto> dtoList = itemDao.allItems();
             for (ItemDto dto:dtoList){
                 JFXButton btn = new JFXButton("Delete");
                 ItemTm tm = new ItemTm(
@@ -131,7 +131,7 @@ public class ItemFormController {
 
     private void deleteItem(String code) {
         try {
-            boolean isDeleted = itemModel.deleteItem(code);
+            boolean isDeleted = itemDao.deleteItem(code);
             if (isDeleted){
                 new Alert(Alert.AlertType.INFORMATION,"Item Deleted!").show();
                 loadItemTable();
@@ -166,7 +166,7 @@ public class ItemFormController {
     @FXML
     void saveButtonOnAction(ActionEvent event) {
         try {
-            boolean isSaved = itemModel.saveItem(new ItemDto(txtItemCode.getText(),
+            boolean isSaved = itemDao.saveItem(new ItemDto(txtItemCode.getText(),
                     txtDescription.getText(),
                     Double.parseDouble(txtUnitPrice.getText()),
                     Integer.parseInt(txtQty.getText()))
@@ -186,7 +186,7 @@ public class ItemFormController {
     @FXML
     void updateButtonOnAction(ActionEvent event) {
         try {
-            boolean isUpdated = itemModel.updateItem( new ItemDto(txtItemCode.getText(),
+            boolean isUpdated = itemDao.updateItem( new ItemDto(txtItemCode.getText(),
                     txtDescription.getText(),
                     Double.parseDouble(txtUnitPrice.getText()),
                     Integer.parseInt(txtQty.getText())

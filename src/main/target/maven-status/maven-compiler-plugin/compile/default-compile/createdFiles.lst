@@ -1,0 +1,5 @@
+model\tm\CustomerTm.class
+AppInitializer.class
+controller\DashboardFormController.class
+model\Customer.class
+controller\CustomerFormController.class

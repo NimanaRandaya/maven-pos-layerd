@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="605.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <TextField fx:id="txtId" layoutX="33.0" layoutY="75.0" prefHeight="31.0" prefWidth="119.0" />
+      <TextField fx:id="txtSalary" layoutX="710.0" layoutY="75.0" />
+      <TextField fx:id="txtName" layoutX="167.0" layoutY="75.0" prefHeight="31.0" prefWidth="258.0" />
+      <TextField fx:id="txtAddress" layoutX="437.0" layoutY="75.0" prefHeight="31.0" prefWidth="258.0" />
+      <Label layoutX="33.0" layoutY="39.0" text="Customer ID" />
+      <Label layoutX="710.0" layoutY="39.0" text="Customer Salart" />
+      <Label layoutX="437.0" layoutY="39.0" text="Customer Address" />
+      <Label layoutX="167.0" layoutY="39.0" text="Customer Name" />
+      <Button layoutX="834.0" layoutY="121.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="31.0" prefWidth="63.0" text="Save" />
+      <Button layoutX="753.0" layoutY="121.0" mnemonicParsing="false" onAction="#updateButtonOnAction" text="Update" />
+      <TableView fx:id="tblCustomer" layoutX="33.0" layoutY="174.0" prefHeight="361.0" prefWidth="868.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="102.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="235.0" text="Name" />
+            <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="257.0" text="Address" />
+            <TableColumn fx:id="colSalary" prefWidth="146.0" text="Salary" />
+            <TableColumn fx:id="colOption" minWidth="0.0" prefWidth="126.0" text="Option" />
+        </columns>
+      </TableView>
+      <Button layoutX="831.0" layoutY="550.0" mnemonicParsing="false" onAction="#reloadButtonOnAction" text="Reload" />
+   </children>
+</AnchorPane>

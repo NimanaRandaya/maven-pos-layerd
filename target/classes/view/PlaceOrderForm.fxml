@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="placeOrderPane" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
+   <children>
+      <Label layoutX="75.0" layoutY="46.0" text="Customer ID">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="46.0" text="Name">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="137.0" text="Item Code">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="137.0" text="Description">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="691.0" layoutY="137.0" text="Unit Price">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="964.0" layoutY="137.0" text="Buying Qty">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXDrawer />
+      <JFXComboBox fx:id="cmbCustId" layoutX="72.0" layoutY="85.0" prefHeight="31.0" prefWidth="228.0" />
+      <JFXComboBox fx:id="cmbItemCode" layoutX="68.0" layoutY="176.0" prefHeight="31.0" prefWidth="228.0" />
+      <JFXTextField fx:id="txtCustName" layoutX="347.0" layoutY="85.0" prefHeight="31.0" prefWidth="272.0" />
+      <JFXTextField fx:id="txtDescription" layoutX="347.0" layoutY="176.0" prefHeight="31.0" prefWidth="272.0" />
+      <JFXTextField fx:id="txtUnitPrice" layoutX="691.0" layoutY="176.0" prefHeight="31.0" prefWidth="228.0" />
+      <JFXTextField fx:id="txtBuyingQty" layoutX="964.0" layoutY="176.0" prefHeight="31.0" prefWidth="172.0" />
+      <JFXTreeTableView fx:id="tblOrder" layoutX="62.0" layoutY="275.0" prefHeight="400.0" prefWidth="1073.0">
+         <columns>
+            <TreeTableColumn fx:id="colCode" prefWidth="122.00003051757812" text="Code" />
+            <TreeTableColumn fx:id="colDescription" prefWidth="402.0" text="Description" />
+            <TreeTableColumn fx:id="colQty" prefWidth="150.0" text="Qty" />
+            <TreeTableColumn fx:id="colAmount" prefWidth="206.0" text="Amount" />
+            <TreeTableColumn fx:id="colOption" prefWidth="191.0" text="Option" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="28.0" layoutY="20.0" onAction="#backButtonOnAction" prefHeight="28.0" prefWidth="44.0">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/bck.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton layoutX="983.0" layoutY="222.0" onAction="#addToCartButtonOnAction" prefHeight="42.0" prefWidth="152.0" style="-fx-background-color: #ff6900;" text="Add to Cart" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="983.0" layoutY="697.0" onAction="#placeOrderButtonOnAction" prefHeight="42.0" prefWidth="152.0" style="-fx-background-color: #f44336;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="62.0" layoutY="705.0" text="Total :">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="168.0" layoutY="705.0" text="0.00">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="969.0" layoutY="46.0">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" contentDisplay="CENTER" layoutX="964.0" layoutY="46.0" text="Buying Qty">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

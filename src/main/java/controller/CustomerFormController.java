@@ -53,12 +53,7 @@ public class CustomerFormController {
     @FXML
     private TableColumn colOption;
 
-    private CustomerBo <CustomerDto> customerBo = new CustomerBoImpl() {
-        @Override
-        public boolean saveCustomer(CustomerDto dto) throws SQLException, ClassNotFoundException {
-            return false;
-        }
-    };
+    private CustomerBo <CustomerDto> customerBo = new CustomerBoImpl() ;
 
     public void initialize(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));

@@ -139,7 +139,6 @@ public class PlaceOrderFormController {
         });
 
         boolean isExist = false;
-
         for (OrderTm order:orderTms){
             if (order.getCode().equals(orderTm.getCode())){
                 order.setQty(order.getQty()+orderTm.getQty());
@@ -189,6 +188,7 @@ public class PlaceOrderFormController {
         if (!orderTms.isEmpty()){
             boolean isSaved = false;
             try {
+
                 isSaved = orderBo.saveOrder(new OrderDto(
                         lblOrderId.getText(),
                         LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")).toString(),

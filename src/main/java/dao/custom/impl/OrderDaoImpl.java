@@ -15,7 +15,7 @@ public class OrderDaoImpl implements OrderDao {
 
     OrderDetailsDao orderDetailsDao = new OrderDetailsDaoImpl();
 
-    public boolean saveOrder(OrderDto dto) throws SQLException, ClassNotFoundException {
+    public boolean save(OrderDto dto) throws SQLException, ClassNotFoundException {
         Connection connection = null;
         try {
             connection = DBConnection.getInstance().getConnection();
@@ -57,10 +57,7 @@ public class OrderDaoImpl implements OrderDao {
         return null;
     }
 
-    @Override
-    public boolean save(OrderDto entity) throws SQLException, ClassNotFoundException {
-        return false;
-    }
+
 
     @Override
     public boolean update(OrderDto entity) throws SQLException, ClassNotFoundException {

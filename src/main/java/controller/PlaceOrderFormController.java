@@ -59,14 +59,14 @@ public class PlaceOrderFormController {
     private double tot = 0;
     //private OrderDao orderDao = new OrderDaoImpl();
     private ObservableList<OrderTm> orderTms =FXCollections.observableArrayList();
-    public void initialize(){
+    public void initialize() throws SQLException, ClassNotFoundException {
         colCode.setCellValueFactory(new TreeItemPropertyValueFactory<>("code"));
         colDescription.setCellValueFactory(new TreeItemPropertyValueFactory<>("description"));
         colQty.setCellValueFactory(new TreeItemPropertyValueFactory<>("qty"));
         colAmount.setCellValueFactory(new TreeItemPropertyValueFactory<>("amount"));
         colOption.setCellValueFactory(new TreeItemPropertyValueFactory<>("btn"));
 
-        generatedId();
+        setOrderId();
         loadCustomerIds();
         loadItemCodes();
 
@@ -159,21 +159,8 @@ public class PlaceOrderFormController {
         lblTotal.setText(String.format("%.2f",tot));
     }
 
-    public void generatedId(){
-        try {
-            String id = orderBo.getLastOrder().getOrderId();
-            if (id!=null){
-                int num = Integer.parseInt(id.split("[D]")[1]);
-                num++;
-                lblOrderId.setText(String.format("D%03d",num));
-            }else{
-               lblOrderId.setText("D001");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+    public void setOrderId() throws SQLException, ClassNotFoundException {
+        lblOrderId.setText(orderBo.generateId());
     }
     public void placeOrderButtonOnAction(ActionEvent actionEvent) {
         List<OrderDetailsDto> list = new ArrayList<>();

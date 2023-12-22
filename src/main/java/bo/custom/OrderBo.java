@@ -7,5 +7,5 @@ import java.sql.SQLException;
 
 public interface OrderBo extends SuperBo {
     boolean saveOrder(OrderDto dto) throws SQLException, ClassNotFoundException;
-    OrderDto getLastOrder() throws SQLException, ClassNotFoundException;
+    String generateId()throws SQLException, ClassNotFoundException;
 }

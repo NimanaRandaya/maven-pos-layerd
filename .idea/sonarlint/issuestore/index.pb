@@ -409,3 +409,5 @@ w
 G.idea/sonarlint/issuestore/6/b/6b93d582517fa4cc6e6f490caec7bca465dd56f1,1\2\1209d2062b3253d60adb9a0140f49bc865c7692e
 w
 G.idea/sonarlint/issuestore/8/4/84fd940d9c5515d970e8ec670a8589dab7ee1513,f\1\f11afc0bd695a96171b56f1598139c83837fb0d7
+d
+4src/main/java/bo/custom/impl/OrderDetailsBoImpl.java,8\8\88a8de834924e254fc7a7c4120699646481b0cc3

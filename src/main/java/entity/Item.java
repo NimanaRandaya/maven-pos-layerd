@@ -1,5 +1,6 @@
 package entity;
 
+import dto.ItemDto;
 import lombok.*;
 
 @AllArgsConstructor
@@ -7,7 +8,7 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
-public class Item {
+public class Item extends ItemDto {
     private String code;
     private String description;
     private double unitPrice;

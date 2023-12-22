@@ -1,37 +1,35 @@
 
-a	java:S112„"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
-a	java:S112’"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
-a	java:S112¦"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
-a	java:S112Ί"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
-a	java:S112Ξ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ
-J
-java:S37409"/Provide the parametrized type for this generic.(…ϊ§¥ωÿÿÿÿ
-D
-java:S3740<"/Provide the parametrized type for this generic.(³Ψm
-J
-java:S3740?"/Provide the parametrized type for this generic.(ύΐ³ώÿÿÿÿ
-J
-java:S3740B"/Provide the parametrized type for this generic.(‚λÒϋÿÿÿÿ
-J
-java:S3740E"/Provide the parametrized type for this generic.(Θβ–ϊÿÿÿÿ
+h	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8η‘ϋΙ1
+h	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8θ‘ϋΙ1
+h	java:S112§"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8θ‘ϋΙ1
+h	java:S112»"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8θ‘ϋΙ1
+h	java:S112Ο"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ι‘ϋΙ1
 Q
-java:S3740G"/Provide the parametrized type for this generic.(Ξ±®ϊÿÿÿÿ8“€†Ι1
-t
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ò©¶§ύÿÿÿÿ
-k	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ί…Ο¬όÿÿÿÿ
->
-java:S1604X"(Make this anonymous inner class a lambda(σβ›έ
-C
-java:S1604U"(Make this anonymous inner class a lambda(Ξ™κÿώÿÿÿÿ
-k
-java:S1104%"UMake txtSearch a static final constant or non-public and provide accessors if needed.(ος§
-G
-java:S1602Q",Remove useless curly braces around statement(ί…Ο¬όÿÿÿÿ
-B
-java:S1602z",Remove useless curly braces around statement(λΉ¬
+java:S37409"/Provide the parametrized type for this generic.(…ϊ§¥ωÿÿÿÿ8μ‘ϋΙ1
+K
+java:S3740<"/Provide the parametrized type for this generic.(³Ψm8ξ‘ϋΙ1
+Q
+java:S3740?"/Provide the parametrized type for this generic.(ύΐ³ώÿÿÿÿ8ο‘ϋΙ1
+Q
+java:S3740B"/Provide the parametrized type for this generic.(‚λÒϋÿÿÿÿ8π‘ϋΙ1
+Q
+java:S3740E"/Provide the parametrized type for this generic.(Θβ–ϊÿÿÿÿ8ς‘ϋΙ1
+|
+java:S2293€"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ò©¶§ύÿÿÿÿ8σ‘ϋΙ1
+r	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ί…Ο¬όÿÿÿÿ8υ‘ϋΙ1
+E
+java:S1604X"(Make this anonymous inner class a lambda(σβ›έ8υ‘ϋΙ1
+J
+java:S1604U"(Make this anonymous inner class a lambda(Ξ™κÿώÿÿÿÿ8χ‘ϋΙ1
+r
+java:S1104%"UMake txtSearch a static final constant or non-public and provide accessors if needed.(ος§8ϊ‘ϋΙ1
+N
+java:S1602Q",Remove useless curly braces around statement(ί…Ο¬όÿÿÿÿ8¬“ϋΙ1
+I
+java:S1602{",Remove useless curly braces around statement(λΉ¬8Ί“ϋΙ1
 S
-java:S1128"6Remove this unused import 'bo.custom.impl.ItemBoImpl'.(έ­8‘Ι1
+java:S1128"6Remove this unused import 'bo.custom.impl.ItemBoImpl'.(έ­8ΰ“ϋΙ1
 Q
-java:S1128"/Remove this unused import 'dao.custom.ItemDao'.(«µÒ£ύÿÿÿÿ8‘Ι1
+java:S1128"/Remove this unused import 'dao.custom.ItemDao'.(«µÒ£ύÿÿÿÿ8α“ϋΙ1
 Z
-java:S1128"8Remove this unused import 'dao.custom.impl.ItemDaoImpl'.(δ½υΆϋÿÿÿÿ8‘Ι1
+java:S1128"8Remove this unused import 'dao.custom.impl.ItemDaoImpl'.(δ½υΆϋÿÿÿÿ8α“ϋΙ1

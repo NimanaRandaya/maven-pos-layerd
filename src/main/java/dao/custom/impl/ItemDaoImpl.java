@@ -63,11 +63,11 @@ public class ItemDaoImpl implements ItemDao {
         return list;
     }
 
-    public Item getItem(String value) throws SQLException, ClassNotFoundException {
+    public Item getItem(String code) throws SQLException, ClassNotFoundException {
         String sql ="SELECT * FROM item WHERE code=? ";
-        //PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
-        //pstm.setString(1,code);
-        ResultSet resultSet = CrudUtil.execute(sql,value);
+        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        pstm.setString(1,code);
+        ResultSet resultSet = pstm.executeQuery();
         if (resultSet.next()){
             return  new Item(
                     resultSet.getString(1),

@@ -9,11 +9,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
 
     OrderDetailsDao orderDetailsDao = new OrderDetailsDaoImpl();
-    @Override
+
     public boolean saveOrder(OrderDto dto) throws SQLException, ClassNotFoundException {
         Connection connection = null;
         try {
@@ -41,7 +42,7 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public OrderDto lastOrder() throws SQLException, ClassNotFoundException {
+    public OrderDto getLastOrder() throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM orders ORDER BY id DESC LIMIT 1";
         PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
         ResultSet resultSet = pstm.executeQuery();
@@ -55,4 +56,25 @@ public class OrderDaoImpl implements OrderDao {
         }
         return null;
     }
+
+    @Override
+    public boolean save(OrderDto entity) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public boolean update(OrderDto entity) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public boolean delete(String value) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public List<OrderDto> getAll() throws SQLException, ClassNotFoundException {
+        return null;
+    }
+
 }

@@ -1,6 +1,9 @@
 
-]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8¢Œ¡şÈ1
-]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8ŠÛÇşÈ1
-]	java:S125+"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8¿ÆÌşÈ1
-]	java:S1255"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8š—ÑşÈ1
-]	java:S125D"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8ß¬ØşÈ1
+l
+java:S2095D"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8«¥È„É1
+]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8°¥È„É1
+]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8µ¥È„É1
+]	java:S125+"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8¹¥È„É1
+]	java:S1255"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8½¥È„É1
+J
+java:S1128"(Remove this unused import 'dto.ItemDto'.(‚Æ‘ıÿÿÿÿ8Å¥È„É1

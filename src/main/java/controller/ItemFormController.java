@@ -1,10 +1,14 @@
 package controller;
 
+import bo.BoFactory;
+import bo.custom.ItemBo;
+import bo.custom.impl.ItemBoImpl;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
+import dao.util.BoType;
 import dto.ItemDto;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -64,7 +68,7 @@ public class ItemFormController {
     @FXML
     private TreeTableColumn colOption;
 
-    private ItemDao itemDao = new ItemDaoImpl();
+    private ItemBo itemBo = BoFactory.getInstance().getBo(BoType.ITEM);
 
     public void initialize(){
         colItemCode.setCellValueFactory(new TreeItemPropertyValueFactory<>("code"));
@@ -105,7 +109,7 @@ public class ItemFormController {
     private void loadItemTable() {
         ObservableList<ItemTm> tmList = FXCollections.observableArrayList();
         try {
-            List<ItemDto> dtoList = itemDao.allItems();
+            List<ItemDto> dtoList = itemBo.allItems();
             for (ItemDto dto:dtoList){
                 JFXButton btn = new JFXButton("Delete");
                 ItemTm tm = new ItemTm(
@@ -131,7 +135,7 @@ public class ItemFormController {
 
     private void deleteItem(String code) {
         try {
-            boolean isDeleted = itemDao.deleteItem(code);
+            boolean isDeleted = itemBo.deleteItem(code);
             if (isDeleted){
                 new Alert(Alert.AlertType.INFORMATION,"Item Deleted!").show();
                 loadItemTable();
@@ -166,7 +170,7 @@ public class ItemFormController {
     @FXML
     void saveButtonOnAction(ActionEvent event) {
         try {
-            boolean isSaved = itemDao.saveItem(new ItemDto(txtItemCode.getText(),
+            boolean isSaved = itemBo.saveItem(new ItemDto(txtItemCode.getText(),
                     txtDescription.getText(),
                     Double.parseDouble(txtUnitPrice.getText()),
                     Integer.parseInt(txtQty.getText()))
@@ -186,7 +190,7 @@ public class ItemFormController {
     @FXML
     void updateButtonOnAction(ActionEvent event) {
         try {
-            boolean isUpdated = itemDao.updateItem( new ItemDto(txtItemCode.getText(),
+            boolean isUpdated = itemBo.updateItem( new ItemDto(txtItemCode.getText(),
                     txtDescription.getText(),
                     Double.parseDouble(txtUnitPrice.getText()),
                     Integer.parseInt(txtQty.getText())

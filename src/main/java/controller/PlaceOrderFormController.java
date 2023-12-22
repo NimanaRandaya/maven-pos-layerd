@@ -1,7 +1,9 @@
 package controller;
 
 import bo.custom.CustomerBo;
+import bo.custom.ItemBo;
 import bo.custom.impl.CustomerBoImpl;
+import bo.custom.impl.ItemBoImpl;
 import com.jfoenix.controls.*;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import dto.OrderDetailsDto;
@@ -53,7 +55,8 @@ public class PlaceOrderFormController {
     private List<CustomerDto> customers;
     private List<ItemDto> items;
     private CustomerBo<CustomerDto> customerBo = new CustomerBoImpl();
-    private ItemDao itemDao =new ItemDaoImpl();
+    //private ItemDao itemDao =new ItemDaoImpl();
+    private ItemBo itemBo = new ItemBoImpl();
     private double tot = 0;
     private OrderDao orderDao = new OrderDaoImpl();
     private ObservableList<OrderTm> orderTms =FXCollections.observableArrayList();
@@ -89,7 +92,7 @@ public class PlaceOrderFormController {
 
     private void loadItemCodes() {
         try {
-            items = itemDao.allItems();
+            items = itemBo.allItems();
             ObservableList list= FXCollections.observableArrayList();
             for (ItemDto dto:items){
                 list.add(dto.getCode());
@@ -119,7 +122,7 @@ public class PlaceOrderFormController {
 
     public void addToCartButtonOnAction(ActionEvent actionEvent) {
         try {
-            double amount = itemDao.getItem(cmbItemCode.getValue().toString()).getUnitPrice()* Integer.parseInt(txtBuyingQty.getText());
+            double amount = itemBo.getItem(cmbItemCode.getValue().toString()).getUnitPrice()* Integer.parseInt(txtBuyingQty.getText());
             JFXButton btn = new JFXButton("Delete");
 
             OrderTm orderTm =new OrderTm(

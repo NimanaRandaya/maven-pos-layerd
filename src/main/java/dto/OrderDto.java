@@ -14,5 +14,4 @@ public class OrderDto {
     private String date;
     private String custId;
     private List<OrderDetailsDto> list;
-
 }

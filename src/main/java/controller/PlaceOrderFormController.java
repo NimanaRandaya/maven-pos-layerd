@@ -54,7 +54,7 @@ public class PlaceOrderFormController {
     public Label lblOrderId;
     private List<CustomerDto> customers;
     private List<ItemDto> items;
-    private CustomerBo<CustomerDto> customerBo = new CustomerBoImpl();
+    private CustomerBo customerBo = new CustomerBoImpl();
     //private ItemDao itemDao =new ItemDaoImpl();
     private ItemBo itemBo = new ItemBoImpl();
     private double tot = 0;
@@ -120,52 +120,46 @@ public class PlaceOrderFormController {
         }
     }
 
-    public void addToCartButtonOnAction(ActionEvent actionEvent) {
-        try {
-            double amount = itemBo.getItem(cmbItemCode.getValue().toString()).getUnitPrice()* Integer.parseInt(txtBuyingQty.getText());
-            JFXButton btn = new JFXButton("Delete");
+    public void addToCartButtonOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        double amount = itemBo.getItem(cmbItemCode.getValue().toString()).getUnitPrice()* Integer.parseInt(txtBuyingQty.getText());
+        JFXButton btn = new JFXButton("Delete");
 
-            OrderTm orderTm =new OrderTm(
-                    cmbItemCode.getValue().toString(),
-                    txtDescription.getText(),
-                    Integer.parseInt(txtBuyingQty.getText()),
-                    amount,
-                    btn
-                    );
+        OrderTm orderTm =new OrderTm(
+                cmbItemCode.getValue().toString(),
+                txtDescription.getText(),
+                Integer.parseInt(txtBuyingQty.getText()),
+                amount,
+                btn
+                );
 
-            btn.setOnAction(actionEvent1 ->{
-                orderTms.remove(orderTm);
-                tot-=orderTm.getAmount();
-                tblOrder.refresh();
-                lblTotal.setText(String.format("%.2f",tot));
-            });
+        btn.setOnAction(actionEvent1 ->{
+            orderTms.remove(orderTm);
+            tot-=orderTm.getAmount();
+            tblOrder.refresh();
+            lblTotal.setText(String.format("%.2f",tot));
+        });
 
-            boolean isExist = false;
+        boolean isExist = false;
 
-            for (OrderTm order:orderTms){
-                if (order.getCode().equals(orderTm.getCode())){
-                    order.setQty(order.getQty()+orderTm.getQty());
-                    order.setAmount(order.getAmount()+orderTm.getAmount());
-                    isExist =true;
-                    tot+=orderTm.getAmount();
-                }
-            }
-
-            if (!isExist) {
-                orderTms.add(orderTm);
+        for (OrderTm order:orderTms){
+            if (order.getCode().equals(orderTm.getCode())){
+                order.setQty(order.getQty()+orderTm.getQty());
+                order.setAmount(order.getAmount()+orderTm.getAmount());
+                isExist =true;
                 tot+=orderTm.getAmount();
             }
-
-            RecursiveTreeItem<OrderTm> treeItem = new RecursiveTreeItem<>(orderTms, RecursiveTreeObject::getChildren);
-            tblOrder.setRoot(treeItem);
-            tblOrder.setShowRoot(false);
-            lblTotal.setText(String.format("%.2f",tot));
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
         }
+
+        if (!isExist) {
+            orderTms.add(orderTm);
+            tot+=orderTm.getAmount();
+        }
+
+        RecursiveTreeItem<OrderTm> treeItem = new RecursiveTreeItem<>(orderTms, RecursiveTreeObject::getChildren);
+        tblOrder.setRoot(treeItem);
+        tblOrder.setShowRoot(false);
+        lblTotal.setText(String.format("%.2f",tot));
+
     }
 
     public void generatedId(){

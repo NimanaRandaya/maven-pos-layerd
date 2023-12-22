@@ -3,11 +3,9 @@ g	java:S112f"FDefine and throw a dedicated exception instead of using a generi
 g	java:S112h"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¸Ó’ÿÈ1
 g	java:S112u"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹Ó’ÿÈ1
 g	java:S112w"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ºÓ’ÿÈ1
-h	java:S112¥"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ºÓ’ÿÈ1
-h	java:S112§"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8»Ó’ÿÈ1
-h	java:S112Õ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8»Ó’ÿÈ1
-h	java:S112×"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8»Ó’ÿÈ1
-h	java:S112ä"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8®¶ĞÿÈ1
+h	java:S112Ï"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8»Ó’ÿÈ1
+h	java:S112Ñ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8»Ó’ÿÈ1
+h	java:S112Ş"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8®¶ĞÿÈ1
 J
 java:S3740)"/Provide the parametrized type for this generic.(¡ßŒüÿÿÿÿ
 L
@@ -61,21 +59,31 @@ b
 java:S2147g"ECombine this catch with the one at line 101, which has the same body.(ıàÑÎ8ÇÔ’ÿÈ1
 b
 java:S2147v"ECombine this catch with the one at line 116, which has the same body.(ıàÑÎ8ÊÔ’ÿÈ1
+‹
+java:S1130{"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(ô£°¹8‰ÖÀÉ1
+–
+java:S1130{"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ô£°¹8ŠÖÀÉ1
 O
-java:S1172{"2Remove this unused method parameter "actionEvent".(¦Ã¶‰8ÍÔ’ÿÈ1
+java:S1172{"2Remove this unused method parameter "actionEvent".(ô£°¹8ÍÔ’ÿÈ1
 c
-java:S2147¦"ECombine this catch with the one at line 164, which has the same body.(ıàÑÎ8ÚÔ’ÿÈ1
-c
-java:S2147¸"ECombine this catch with the one at line 182, which has the same body.(ıàÑÎ8âÔ’ÿÈ1
+java:S2147²"ECombine this catch with the one at line 176, which has the same body.(ıàÑÎ8âÔ’ÿÈ1
 S
-java:S6397°"5Replace this character class by the character itself.(à‡·¬8ÜÔ’ÿÈ1
+java:S6397ª"5Replace this character class by the character itself.(à‡·¬8ÜÔ’ÿÈ1
 U
-java:S1172¼"2Remove this unused method parameter "actionEvent".(¨í‘Ïüÿÿÿÿ8ßÔ’ÿÈ1
+java:S1172¶"2Remove this unused method parameter "actionEvent".(¨í‘Ïüÿÿÿÿ8ßÔ’ÿÈ1
 c
-java:S2147Ö"ECombine this catch with the one at line 212, which has the same body.(ıàÑÎ8±·ĞÿÈ1
+java:S2147Ğ"ECombine this catch with the one at line 206, which has the same body.(ıàÑÎ8±·ĞÿÈ1
 c
-java:S1858Ë"@"format" returns a string, there's no need to call "toString()".(ÚÓø®ıÿÿÿÿ8ãÔ’ÿÈ1
+java:S1858Å"@"format" returns a string, there's no need to call "toString()".(ÚÓø®ıÿÿÿÿ8ãÔ’ÿÈ1
 k
-java:S3986Ë"HMake sure that week Year "YYYY" is expected here instead of Year "yyyy".(ÚÓø®ıÿÿÿÿ8äÔ’ÿÈ1
+java:S3986Å"HMake sure that week Year "YYYY" is expected here instead of Year "yyyy".(ÚÓø®ıÿÿÿÿ8äÔ’ÿÈ1
 U
-java:S1172Ş"2Remove this unused method parameter "actionEvent".(Íáå‘ùÿÿÿÿ8èÔ’ÿÈ1
+java:S1172Ø"2Remove this unused method parameter "actionEvent".(Íáå‘ùÿÿÿÿ8èÔ’ÿÈ1
+U
+java:S1128"3Remove this unused import 'dao.custom.CustomerDao'.(‰‡¬«úÿÿÿÿ8¹ÖÀÉ1
+Q
+java:S1128"/Remove this unused import 'dao.custom.ItemDao'.(«µÒ£ıÿÿÿÿ8¹ÖÀÉ1
+Y
+java:S1128"<Remove this unused import 'dao.custom.impl.CustomerDaoImpl'.(á·Ì‰8ºÖÀÉ1
+Z
+java:S1128"8Remove this unused import 'dao.custom.impl.ItemDaoImpl'.(ä½õ¢ûÿÿÿÿ8ºÖÀÉ1

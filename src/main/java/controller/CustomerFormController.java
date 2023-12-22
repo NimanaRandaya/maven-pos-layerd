@@ -160,7 +160,6 @@ public class CustomerFormController {
 
     @FXML
     void updateButtonOnAction(ActionEvent event) {
-
        try {
             boolean isUpdated = customerBo.updateCustomer( new CustomerDto(txtId.getText(),
                     txtName.getText(),

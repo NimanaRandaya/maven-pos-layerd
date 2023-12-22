@@ -39,5 +39,6 @@
                        <Image url="@../img/bck.png" />
                    </image>
                </ImageView>
-         </graphic></JFXButton> </children>
+         </graphic></JFXButton>
+      <Button fx:id="btnCustomerReports" layoutX="738.0" layoutY="550.0" mnemonicParsing="false" onAction="#customerReportsButtonOnAction" text="Reports" /> </children>
 </AnchorPane>

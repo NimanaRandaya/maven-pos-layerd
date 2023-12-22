@@ -1,34 +1,42 @@
 
-g	java:S112h"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¦ì“€É1
-g	java:S112j"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8§ì“€É1
-g	java:S112y"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8§ì“€É1
-h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8§ì“€É1
-h	java:S112±"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8§ì“€É1
-h	java:S112»"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8§ì“€É1
+g	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8×“É1
+g	java:S112q"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8×“É1
+h	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ø“É1
+h	java:S112¤"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ø“É1
+h	java:S112¸"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ø“É1
+h	java:S112Â"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ø“É1
+h	java:S112Ï"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ø“É1
 Q
-java:S3740,"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8¨ì“€É1
+java:S37403"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8Ø“É1
 L
-java:S3740/"/Provide the parametrized type for this generic.(Œà•®8¨ì“€É1
+java:S37406"/Provide the parametrized type for this generic.(Œà•®8Ø“É1
 L
-java:S37402"/Provide the parametrized type for this generic.(´°æ¸8¨ì“€É1
+java:S37409"/Provide the parametrized type for this generic.(´°æ¸8Ø“É1
 Q
-java:S37405"/Provide the parametrized type for this generic.(ù‚©·üÿÿÿÿ8¨ì“€É1
+java:S3740<"/Provide the parametrized type for this generic.(ù‚©·üÿÿÿÿ8Ø“É1
 L
-java:S37408"/Provide the parametrized type for this generic.(ÚÊØ˜8¨ì“€É1
-r	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãŠÿËúÿÿÿÿ8©ì“€É1
+java:S3740?"/Provide the parametrized type for this generic.(ÚÊØ˜8Ø“É1
+r	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãŠÿËúÿÿÿÿ8Ù“É1
 z
-java:S1104"XMake customerPane a static final constant or non-public and provide accessors if needed.(šÿß­úÿÿÿÿ8«ì“€É1
+java:S1104!"XMake customerPane a static final constant or non-public and provide accessors if needed.(šÿß­úÿÿÿÿ8Ú“É1
+z
+java:S1104""^Make btnCustomerReports a static final constant or non-public and provide accessors if needed.(‰‘Ş8Ú“É1
 N
-java:S1602D",Remove useless curly braces around statement(ãŠÿËúÿÿÿÿ8Æí“€É1
+java:S1602K",Remove useless curly braces around statement(ãŠÿËúÿÿÿÿ8¦Ÿ“É1
 b
-java:S2147i"ECombine this catch with the one at line 103, which has the same body.(ıàÑÎ8Êí“€É1
+java:S2147p"ECombine this catch with the one at line 110, which has the same body.(ıàÑÎ8©Ÿ“É1
 I
-java:S1602`",Remove useless curly braces around statement(ë¹¬8Ìí“€É1
+java:S1602g",Remove useless curly braces around statement(ë¹¬8ªŸ“É1
 U
-java:S1172µ"2Remove this unused method parameter "actionEvent".(Íáå‘ùÿÿÿÿ8åí“€É1
+java:S1172¼"2Remove this unused method parameter "actionEvent".(Íáå‘ùÿÿÿÿ8·Ÿ“É1
+U
+java:S1172Æ"2Remove this unused method parameter "actionEvent".(ò©Æ¦üÿÿÿÿ8ÈŸ“É1
+Y	java:S125É"<This block of commented-out lines of code should be removed.(ºğ¸8ÈŸ“É1
 \
-java:S1128":Remove this unused import 'bo.custom.impl.CustomerBoImpl'.(–×³€ÿÿÿÿÿ8èŞŒÉ1
+java:S1128":Remove this unused import 'bo.custom.impl.CustomerBoImpl'.(–×³€ÿÿÿÿÿ8ı“‘“É1
 U
-java:S1128"3Remove this unused import 'dao.custom.CustomerDao'.(‰‡¬«úÿÿÿÿ8èŞŒÉ1
+java:S1128"3Remove this unused import 'dao.custom.CustomerDao'.(‰‡¬«úÿÿÿÿ8ı“‘“É1
 Y
-java:S1128"<Remove this unused import 'dao.custom.impl.CustomerDaoImpl'.(á·Ì‰8èŞŒÉ1
+java:S1128"<Remove this unused import 'dao.custom.impl.CustomerDaoImpl'.(á·Ì‰8ı“‘“É1
+o
+java:S1128"MRemove this unused import 'net.sf.jasperreports.engine.design.JRDesignQuery'.(“ˆØäıÿÿÿÿ8ş“‘“É1
